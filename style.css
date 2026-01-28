@@ -21,15 +21,12 @@ fieldset {
     border: 2px solid;
     box-shadow: 0 0 2px #ff0000, 0 0 2px #00ffff;
 }
-.mainx {
-    margin:0;
-    padding:0;
-}
 
 .ticker-wrap img {
     height: 1em;
     width: auto;
     vertical-align: middle;
+    border
 }
 
 .ticker-wrap {
