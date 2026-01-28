@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang=en-us>
+<head>
+  <title>hi! hello!!!! hi!!!!</title>
+  <link rel="icon" type="image/x-icon" href="https://media.tenor.com/A-Cc_uGZVQEAAAAi/lain-serial-experiments-lain.gif">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+<!--
+Source - https://stackoverflow.com/a
+Posted by rmurph46, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-27, License - CC BY-SA 3.0
+-->
+<div class="ticker-wrap">
+    <p class="marquee">
+        <span>major site rewrite kind of a lot of its copy pasted LETS GOOOOO | lets all love lain!!! | kinda deals that make you wanna boogie | hello from the abyss! (written while internet dead) | Hi Yuki | build more personal sites | YAHARR THERE BE TREASURE | hey Miku whats the worst Pixar movie? | <img src="https://c.tenor.com/GeG1vVt8j24AAAAC/tenor.gif"> | they lied to us high school is not like persona | <img src="resize.gif"> | is the now listening widget broken again? | we STEAM. STEAMAPPS. COMMON. | you love the jank ass news ticker dont you | dance on me balls, cat fucking a handbag yours only yours i wanna sleep with winston its no lie lisa in the crowd said look larry had a vagina malfunction oo oo ooa oa | you are in OHIO | Ditch Spotify <a href="https://bandcamp.com/">Purchase FLACs</a> | bad css is my passion | now with even MORE blackjack and hookers | hello everynyan, how are you? fine? thank you | OH MY GAH | <img src=https://media.tenor.com/UrpR4peo_MMAAAAi/jackenstein-deltarune.gif> | oh theres the loop here comes the bigass gap&nbsp;</span>
+    </p>
+<!--    <p class="marquee marquee2">
+        <span>placeholder&nbsp;</span>
+    </p>-->
+</div>
+
+<div class="mainx"> <!--define main box-->
+      <fieldset>
+
+            <ul style="list-style: none; padding-left: 0;">
+                <li><b>name(s):</b> ashe/liz/lizzie</li>
+                <li><b>age:</b> 19</li>
+                <li><b>pronouns:</b> she/they</li>
+                <li><b>gender:</b> fluid (enby/fem)</li>
+                <li><b>sexuality:</b> pansexual</li>
+            </ul>
+
+            <ul style="list-style: none; padding-left: 0;">
+                <li><b>interests:</b> general technology, y2k, linux, open source, selfhosting</li>
+                <li><b>you should know:</b> i have autism, adhd, (social) anxiety, and depression</li>
+            </ul>
+     </fieldset>
+    </div>
+<div class="music">
+ <fieldset>
+ <legend>now listening:</legend>
+   <img src="placeholder.jpg" alt="FUCKING ART MISSING" id="albumArt" class="album-art">
+               <div class="song-info">
+                   <p><strong>songname |</strong> <span id="track">idk lol</span></p>
+                   <p><strong>artist |</strong> <span id="artist">idk lol</span></p>
+                   <p><strong>album |</strong> <span id="album">idk lol</span></p>
+                   <p><a href="#" target="_blank" id="trackUrl">go to the peak ></a></p>
+               </div>
+     <script>
+const LASTFM_API_KEY = 'e00692134aefc1abf2643ef7b90fc8ce'; // i know. but please dont
+const LASTFM_USER = 'cowshu';
+
+async function fetchNowPlaying() {
+    const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const track = Array.isArray(data.recenttracks.track)
+            ? data.recenttracks.track[0]
+            : data.recenttracks.track;
+
+        const trackName = track.name || 'idk lol';
+        const artistName = track.artist['#text'] || track.artist.name || 'idk lol';
+        const albumName = track.album['#text'] || 'idk lol';
+        const trackUrl = track.url || '#';
+
+        const albumArt = track.image.find(img => img.size === 'large')['#text'] || 'placeholder.jpg';
+
+        document.getElementById('track').textContent = trackName;
+        document.getElementById('artist').textContent = artistName;
+        document.getElementById('album').textContent = albumName;
+        document.getElementById('albumArt').src = albumArt;
+        document.getElementById('trackUrl').href = trackUrl;
+
+    } catch (error) {
+        console.error('could not fetch :(', error);
+        document.getElementById('track').textContent = 'error loading track';
+    }
+}
+
+setInterval(fetchNowPlaying, 10000);
+fetchNowPlaying();
+</script>
+ </fieldset>
+</div>
+</body>
+</html>
