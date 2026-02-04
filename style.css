@@ -17,6 +17,9 @@ body, html {
 a {
     color: white;
 }
+strong, b, h1, h2, h3 {
+    text-shadow: none;
+}
 fieldset {
     border: 2px solid;
     box-shadow: 0 0 2px #ff0000, 0 0 2px #00ffff;
