@@ -47,7 +47,7 @@ $hits = (int)file_get_contents($counter_file);
 $hits++;
 file_put_contents($counter_file, $hits);
 
-echo "<p>$hits came before you!</p>";
+echo "$hits came before you!";
 ?>
 <br><small>this may look weird. im testing php and this is the first commit :3c</small>
 <div class="infobox">
