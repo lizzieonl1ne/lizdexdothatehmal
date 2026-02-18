@@ -21,6 +21,7 @@ Retrieved 2026-01-27, License - CC BY-SA 3.0
         <span>placeholder&nbsp;</span>
     </p>-->
 </div>
+<div class="header">
     <fieldset>
         <h1>hello everynyan</h1>
         <h3>how are you? fine? thank you</h3>
@@ -33,11 +34,24 @@ setInterval(() => {
 }, 1000);
 </script>
     </fieldset>
-<div class="header">
+
 </div>
+<br><?php
+$counter_file = 'hits.txt';
+
+if (!file_exists($counter_file)) {
+    file_put_contents($counter_file, '0');
+}
+
+$hits = (int)file_get_contents($counter_file);
+$hits++;
+file_put_contents($counter_file, $hits);
+
+echo "<p>$hits came before you!</p>";
+?>
+<br><small>this may look weird. im testing php and this is the first commit :3c</small>
 <div class="infobox">
       <fieldset>
-      <legend>infobox</legend>
             <ul style="list-style: none; padding-left: 0;">
                 <li><b>name(s):</b> ashe/liz/lizzie</li>
                 <li><b>age:</b> 19</li>
@@ -52,7 +66,7 @@ setInterval(() => {
                 <li><b>you should know:</b> i have autism, adhd, (social) anxiety, and depression</li>
             </ul>
      </fieldset>
-    </div>
+</div>
 
 <!--<div class="sched"> under construction!
     <fieldset>
@@ -61,15 +75,17 @@ setInterval(() => {
         <b>
     </fieldset>
 </div>-->
+<legend>now listening:</legend>
 <div class="music">
  <fieldset>
- <legend>now listening:</legend>
+
    <img src="placeholder.jpg" alt="no art" id="albumArt" class="album-art">
                <div class="song-info">
                    <p><strong>track |</strong> <span id="track">idk lol</span></p>
                    <p><strong>artist |</strong> <span id="artist">idk lol</span></p>
                    <p><strong>album |</strong> <span id="album">idk lol</span></p>
                    <p><a href="#" target="_blank" id="trackUrl">go to the peak ></a></p>
+                   <small>pulled from last.fm and tracked on my music server and tidal</small>
                </div>
      <script>
 const LASTFM_API_KEY = 'e00692134aefc1abf2643ef7b90fc8ce'; // i know. but please dont
