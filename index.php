@@ -49,7 +49,6 @@ file_put_contents($counter_file, $hits);
 
 echo "<small>$hits came before you!</small>";
 ?>
-<br><small>this may look weird. im testing php and this is the first commit :3c</small>
 <div class="infobox">
       <fieldset>
             <ul style="list-style: none; padding-left: 0;">
