@@ -36,7 +36,7 @@ setInterval(() => {
     </fieldset>
 
 </div>
-<br><?php
+<?php
 $counter_file = 'hits.txt';
 
 if (!file_exists($counter_file)) {
@@ -47,7 +47,7 @@ $hits = (int)file_get_contents($counter_file);
 $hits++;
 file_put_contents($counter_file, $hits);
 
-echo "$hits came before you!";
+echo "<small>$hits came before you!</small>";
 ?>
 <br><small>this may look weird. im testing php and this is the first commit :3c</small>
 <div class="infobox">
