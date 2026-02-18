@@ -47,7 +47,7 @@ $hits = (int)file_get_contents($counter_file);
 $hits++;
 file_put_contents($counter_file, $hits);
 
-echo "<small>$hits came before you!</small>";
+echo "<small>$hits total views :3c</small>";
 ?>
 <div class="infobox">
       <fieldset>
