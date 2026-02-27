@@ -15,7 +15,7 @@ Retrieved 2026-01-27, License - CC BY-SA 3.0
 -->
 <div class="ticker-wrap">
     <p class="marquee">
-        <span><b>Now on Caddy!</b> | lets all love lain!!! | kinda deals that make you wanna boogie | hello from the abyss! (written while internet dead) | Hi Yuki | build more personal sites | YAHARR THERE BE TREASURE | hey Miku whats the best Pixar movie? | <img src="https://c.tenor.com/GeG1vVt8j24AAAAC/tenor.gif"> | <img src="resize.gif"> | is the now listening widget broken again? | we STEAM. STEAMAPPS. COMMON. | Ditch Spotify <a href="https://bandcamp.com/">Purchase FLACs</a> | bad css is my passion | now with even MORE blackjack and hookers | hello everynyan, how are you? fine? thank you | OH MY GAH | <img src=https://media.tenor.com/UrpR4peo_MMAAAAi/jackenstein-deltarune.gif> | what is this teto pear doin on the calculator is blud einstein | <img src="https://c.tenor.com/OIgJFl2i4j4AAAAd/tenor.gif"> | oh theres the loop here comes the bigass gap&nbsp;</span> <!--if youre wondering, like half of these are inside jokes-->
+        <span>Now on Caddy (also PHP!) | lets all love lain!!! | kinda deals that make you wanna boogie | hello from the abyss! (written while internet dead) | <a href="https://yukisite.xyz">Hi Yuki</a> | build more personal sites | YAHARR THERE BE TREASURE | shuake forever and no one can tell me otherwise | hey Miku whats the best Pixar movie? | <img src="https://c.tenor.com/GeG1vVt8j24AAAAC/tenor.gif"> | <img src="resize.gif"> | what you know about rollin down in the deep | is the now listening widget broken again? | we STEAM. STEAMAPPS. COMMON. | Now enhanced with Microsoft 365 Copilot AI | free to do whatever just chillin in my bed | Ditch Spotify <a href="https://bandcamp.com/">Purchase FLACs</a> | fuck ICE | double fuck israel | bad css is my passion | now with even MORE blackjack and hookers | hello everynyan, how are you? fine? thank you | OH MY GAH | <img src=https://media.tenor.com/UrpR4peo_MMAAAAi/jackenstein-deltarune.gif> | what is this teto pear doin on the calculator is blud einstein | <img src="https://c.tenor.com/OIgJFl2i4j4AAAAd/tenor.gif"> | oh theres the loop here comes the bigass gap&nbsp;</span> <!--if youre wondering, like half of these are inside jokes-->
     </p>
 <!--    <p class="marquee marquee2">
         <span>placeholder&nbsp;</span>
@@ -74,56 +74,50 @@ echo "<small>$hits total views :3c</small>";
         <b>
     </fieldset>
 </div>-->
-<legend>now listening:</legend>
+<legend id="playingStatus">now listening:</legend>
 <div class="music">
- <fieldset>
-
-   <img src="placeholder.jpg" alt="no art" id="albumArt" class="album-art">
-               <div class="song-info">
-                   <p><strong>track |</strong> <span id="track">idk lol</span></p>
-                   <p><strong>artist |</strong> <span id="artist">idk lol</span></p>
-                   <p><strong>album |</strong> <span id="album">idk lol</span></p>
-                   <p><a href="#" target="_blank" id="trackUrl">go to the peak ></a></p>
-                   <small>pulled from last.fm and tracked on my music server and tidal</small>
-               </div>
-     <script>
+<fieldset>
+<img src="placeholder.jpg" alt="no art" id="albumArt" class="album-art">
+<div class="song-info">
+    <p><strong>track |</strong> <span id="track">idk lol</span></p>
+    <p><strong>artist |</strong> <span id="artist">idk lol</span></p>
+    <p><strong>album |</strong> <span id="album">idk lol</span></p>
+    <p><a href="#" target="_blank" id="trackUrl">go to song ></a></p>
+</div>
+<script>
 const LASTFM_API_KEY = 'e00692134aefc1abf2643ef7b90fc8ce'; // i know. but please dont
 const LASTFM_USER = 'cowshu';
-
 async function fetchNowPlaying() {
     const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`;
-
     try {
         const response = await fetch(url);
         const data = await response.json();
-
         const track = Array.isArray(data.recenttracks.track)
-            ? data.recenttracks.track[0]
-            : data.recenttracks.track;
+        ? data.recenttracks.track[0]
+        : data.recenttracks.track;
+
+        const isNowPlaying = track['@attr']?.nowplaying === 'true';
+        document.getElementById('playingStatus').textContent = isNowPlaying ? 'now listening:' : 'last played:';
 
         const trackName = track.name || 'idk lol';
         const artistName = track.artist['#text'] || track.artist.name || 'idk lol';
         const albumName = track.album['#text'] || 'idk lol';
         const trackUrl = track.url || '#';
-
         const albumArt = track.image.find(img => img.size === 'large')['#text'] || 'placeholder.jpg';
-
         document.getElementById('track').textContent = trackName;
         document.getElementById('artist').textContent = artistName;
         document.getElementById('album').textContent = albumName;
         document.getElementById('albumArt').src = albumArt;
         document.getElementById('trackUrl').href = trackUrl;
-
     } catch (error) {
         console.error('could not fetch :(', error);
         document.getElementById('track').textContent = 'error loading track';
     }
 }
-
 setInterval(fetchNowPlaying, 10000);
 fetchNowPlaying();
 </script>
- </fieldset>
+</fieldset>
 </div>
 <script src="oneko.js" class="oneko"></script>
 </body>
