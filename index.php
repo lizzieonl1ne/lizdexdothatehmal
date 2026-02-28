@@ -23,11 +23,11 @@ Retrieved 2026-01-27, License - CC BY-SA 3.0
 </div>
 <div class="header">
     <fieldset>
-        <h1>hello everynyan</h1>
-        <h3>how are you? fine? thank you</h3>
+        <h2>ashe's web home</h2>
         <a href="https://github.com/lizzieonl1ne/lizdexdothatehmal">site source code</a> - <a href="https://wetdry.world/@leexyz">wetdry.world</a> - <a href="https://steamcommunity.com/id/leeisonline/">steam</a> - <a href="https://github.com/lizzieonl1ne">github</a> - <a href="https://bandcamp.com/lizzieonl1ne">bandcamp collection</a>
-        <p>Contact me on Discord!: <strong>@lizzieonl1ne</strong>
-        <br><small>my local time is <strong><span id="time"></span></strong> (US Central, UTC-06:00)</small>
+        <p>Discord: <strong>@lizzieonl1ne</strong>
+        <br>Matrix: <strong>@lizzieonl1ne:matrix.org</strong>
+
 <script>
 setInterval(() => {
   document.getElementById('time').textContent = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago', hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true });
@@ -47,7 +47,7 @@ $hits = (int)file_get_contents($counter_file);
 $hits++;
 file_put_contents($counter_file, $hits);
 
-echo "<small>$hits total views :3c</small>";
+echo "<small>$hits total views</small>";
 ?>
 <div class="infobox">
       <fieldset>
@@ -64,6 +64,8 @@ echo "<small>$hits total views :3c</small>";
                 <li><b>interests:</b> general technology, y2k, linux, open source, selfhosting</li>
                 <li><b>you should know:</b> i have autism, adhd, (social) anxiety, and depression</li>
             </ul>
+            <small>local time: <span id="time"></span>
+            <br>(US Central, UTC-06:00)</small>
      </fieldset>
 </div>
 
@@ -74,7 +76,7 @@ echo "<small>$hits total views :3c</small>";
         <b>
     </fieldset>
 </div>-->
-<legend id="playingStatus">now listening:</legend>
+<legend id="playingStatus">the music widget machine broke</legend>
 <div class="music">
 <fieldset>
 <img src="placeholder.jpg" alt="no art" id="albumArt" class="album-art">
@@ -97,7 +99,7 @@ async function fetchNowPlaying() {
         : data.recenttracks.track;
 
         const isNowPlaying = track['@attr']?.nowplaying === 'true';
-        document.getElementById('playingStatus').textContent = isNowPlaying ? 'now listening:' : 'last played:';
+        document.getElementById('playingStatus').textContent = isNowPlaying ? ' | now listening:' : ' | last played:';
 
         const trackName = track.name || 'idk lol';
         const artistName = track.artist['#text'] || track.artist.name || 'idk lol';
