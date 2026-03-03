@@ -5,6 +5,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <link href="style.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width">
+  <script>const LB_TOKEN = atob('<?php echo base64_encode("bd4c09bd-ad8b-4669-a9b4-1ddd4c85665e"); ?>');</script>
 </head>
 <body>
 
@@ -66,25 +67,25 @@ setInterval(() => {
             <br>(US Central, UTC-06:00)</small>
      </fieldset>
 </div>
-<legend id="playingStatus">the music widget machine broke</legend>
+<legend id="playingStatus">widget broke. ill just predict it</legend>
 <div class="music">
     <fieldset class="music-container">
-        <img src="placeholder.jpg" alt="album art" id="albumArt" class="album-art">
+        <img src="favicon.png" alt="album art" id="albumArt" class="album-art">
 
         <div class="song-info">
             <div class="meta-group">
                 <small>track</small>
-                <span id="track" class="music-seperator">idk lol</span>
+                <span id="track" class="music-seperator">BRISK</span>
             </div>
 
             <div class="meta-group">
                 <small>artist</small>
-                <span id="artist" class="music-seperator">idk lol</span>
+                <span id="artist" class="music-seperator">yoda star war</span>
             </div>
 
             <div class="meta-group">
                 <small>album</small>
-                <span id="album" class="music-seperator">idk lol</span>
+                <span id="album" class="music-seperator">i have no idea</span>
             </div>
             <small><a href="#" target="_blank" id="trackUrl" style="margin-top: 100px;">go to song ></a></small>
         </div>
@@ -93,7 +94,7 @@ setInterval(() => {
 
 </main>
 
-<script src="lastfm.js"></script>
+<script src="listenbrainz.js"></script>
 <script src="oneko.js" class="oneko"></script>
 </body>
 </html>
