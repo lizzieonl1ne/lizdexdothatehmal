@@ -71,14 +71,6 @@ setInterval(() => {
             <br>(US Central, UTC-06:00)</small>
      </fieldset>
 </div>
-
-<!--<div class="sched"> under construction!
-    <fieldset>
-    <legend>schedule</legend>
-        <p>hai im unavailable at these times:
-        <b>
-    </fieldset>
-</div>-->
 <legend id="playingStatus">the music widget machine broke</legend>
 <div class="music">
     <fieldset style="display: flex; align-items: center; gap: 15px;">

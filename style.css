@@ -43,6 +43,9 @@ fieldset {
     vertical-align: middle;
     border
 }
+.infobox {
+    margin-top: 15px;
+}
 
 .ticker-wrap {
     position: fixed;
