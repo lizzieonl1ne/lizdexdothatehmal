@@ -76,6 +76,60 @@ fieldset {
     animation-delay: 12s;
 }
 
+.meta-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-group small {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.music-seperator {
+    display: inline-block;
+    width: fit-width;
+    border-top: 1.5px solid #555;
+    padding-top: 5px;
+
+}
+
+.music-container {
+    display: flex;
+    align-items: left;
+    gap: 20px;
+    padding: 15px;
+}
+
+
+#trackUrl {
+margin-top: 10px;
+}
+
+.album-art {
+    width: 200px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .music-container {
+        display: flex;
+        /*flex-direction: column;*/
+        text-align: left;
+        align-items: left;
+    }
+
+    .meta-group {
+        align-items: left;
+    }
+
+    .album-art {
+        width: 150px;
+        height: fit-content;
+    }
+}
+
 @keyframes marquee {
     0% {
         transform: translate(0, 0);

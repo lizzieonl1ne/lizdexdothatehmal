@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang=en-us>
 <head>
-  <title>hi! hello!!!! hi!!!!</title>
+  <title>hiding in your tablist</title>
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <link href="style.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
 
-<!--
-Source - https://stackoverflow.com/a
-Posted by rmurph46, modified by community. See post 'Timeline' for change history
-Retrieved 2026-01-27, License - CC BY-SA 3.0
--->
 <main>
 <div class="ticker-wrap">
     <p class="marquee">
@@ -73,13 +68,25 @@ setInterval(() => {
 </div>
 <legend id="playingStatus">the music widget machine broke</legend>
 <div class="music">
-    <fieldset style="display: flex; align-items: center; gap: 15px;">
+    <fieldset class="music-container">
         <img src="placeholder.jpg" alt="album art" id="albumArt" class="album-art">
+
         <div class="song-info">
-            <p><strong>track |</strong> <span id="track">idk lol</span></p>
-            <p><strong>artist |</strong> <span id="artist">idk lol</span></p>
-            <p><strong>album |</strong> <span id="album">idk lol</span></p>
-            <p><a href="#" target="_blank" id="trackUrl">go to song ></a></p>
+            <div class="meta-group">
+                <small>track</small>
+                <span id="track" class="music-seperator">idk lol</span>
+            </div>
+
+            <div class="meta-group">
+                <small>artist</small>
+                <span id="artist" class="music-seperator">idk lol</span>
+            </div>
+
+            <div class="meta-group">
+                <small>album</small>
+                <span id="album" class="music-seperator">idk lol</span>
+            </div>
+            <small><a href="#" target="_blank" id="trackUrl" style="margin-top: 100px;">go to song ></a></small>
         </div>
     </fieldset>
 </div>

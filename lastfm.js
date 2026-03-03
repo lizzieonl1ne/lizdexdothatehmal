@@ -16,7 +16,7 @@ async function fetchNowPlaying() {
         const artistName = track.artist['#text'] || track.artist.name || 'idk lol';
         const albumName = track.album['#text'] || 'idk lol';
         const trackUrl = track.url || '#';
-        const albumArt = track.image.find(img => img.size === 'large')['#text'] || 'placeholder.jpg';
+        const albumArt = track.image.find(img => img.size === 'extralarge')['#text'] || 'placeholder.jpg';
         document.getElementById('track').textContent = trackName;
         document.getElementById('artist').textContent = artistName;
         document.getElementById('album').textContent = albumName;
