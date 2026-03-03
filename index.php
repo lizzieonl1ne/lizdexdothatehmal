@@ -24,7 +24,7 @@ Retrieved 2026-01-27, License - CC BY-SA 3.0
 </div>
 <div class="header">
     <fieldset>
-        <h2>ashe's web home</h2>
+        <h2 style="margin-bottom: 0;">ashe's web home</h2>
         <?php
         $counter_file = 'hits.txt';
 
@@ -38,7 +38,8 @@ Retrieved 2026-01-27, License - CC BY-SA 3.0
 
         echo "<small>$hits total views</small>";
         ?>
-        <a href="https://github.com/lizzieonl1ne/lizdexdothatehmal">site source code</a> - <a href="https://wetdry.world/@leexyz">wetdry.world</a> - <a href="https://steamcommunity.com/id/leeisonline/">steam</a> - <a href="https://github.com/lizzieonl1ne">github</a> - <a href="https://bandcamp.com/lizzieonl1ne">bandcamp collection</a>
+        <div style="margin-top: 15px"><a href="https://github.com/lizzieonl1ne/lizdexdothatehmal">site source code</a> - <a href="https://wetdry.world/@leexyz">wetdry.world</a> - <a href="https://steamcommunity.com/id/leeisonline/">steam</a> - <a href="https://github.com/lizzieonl1ne">github</a> - <a href="https://bandcamp.com/lizzieonl1ne">bandcamp collection</a></div>
+
         <p>Discord: <strong>@lizzieonl1ne</strong>
         <br>Matrix: <strong>@lizzieonl1ne:matrix.org</strong>
 
