@@ -74,7 +74,7 @@ async function fetchNowPlaying() {
         }
 
     } catch (error) {
-        document.getElementById('track').textContent = 'error loading track';
+        document.getElementById('track').textContent = 'brisk';
     }
 }
 
