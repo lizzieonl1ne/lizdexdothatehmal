@@ -15,6 +15,10 @@ body, html {
     letter-spacing: 0.03em;
     padding-bottom: 40px;
 }
+main {
+    max-width: 50rem;
+    margin: 0 auto;
+}
 a {
     color: white;
 }
