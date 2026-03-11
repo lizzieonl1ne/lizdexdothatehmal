@@ -1,69 +1,118 @@
+/* Fonts */
 @font-face {
     font-family: 'DepartureMono';
     src: url('DepartureMono.otf');
 }
-body, html {
 
-    background-color:black;
-    color:white;
-    line-height:1.9;
-    font-family:'DepartureMono';
+/* Base */
+body, html {
+    background-color: #000;
+    color: #FFF;
+    font-family: 'DepartureMono';
+    letter-spacing: 0.03em;
+    line-height: 1.9;
+    padding-bottom: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    text-shadow: 0 0 3px #ff0000, 0 0 3px #00ffff; /*no you dont need glasses*/
-    letter-spacing: 0.03em;
-    padding-bottom: 40px;
 }
+
 main {
     max-width: 50rem;
     margin: 0 auto;
 }
+
+/* Typography */
 a {
-    color: white;
-}
-strong, b, h1, h2, h3 {
-    text-shadow: none;
-}
-fieldset {
-    border: 2px solid;
-    box-shadow: 0 0 2px #ff0000, 0 0 2px #00ffff;
+    color: #FFF;
 }
 
-.ticker-wrap img {
-    height: 1em;
-    width: auto;
-    vertical-align: middle;
-    border
+pre {
+    font-family: DepartureMono;
+    font-size: 0.9rem;
+    line-height: 1.28;
+    margin: 0;
+}
+
+pre a {
+    text-decoration: none;
+}
+
+/* Components */
+fieldset {
+    border: 2px solid #FFF;
+    box-shadow: 1.5px 0px 0px #ff0000bb, -1.5px 0px 0px #00ffffbb;
+}
+
+.infobox {
+    margin-top: 15px;
 }
 
 .infobox img {
     height: 1.4em;
     width: auto;
     vertical-align: middle;
-    border
-}
-.infobox {
-    margin-top: 15px;
 }
 
+/* Music Player */
+.music-container {
+    display: flex;
+    align-items: left;
+    gap: 20px;
+    padding: 15px;
+}
+
+.album-art {
+    width: 200px;
+    height: auto;
+}
+
+.meta-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-group small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.music-seperator {
+    display: inline-block;
+    width: fit-content;
+    border-top: 1.5px solid #555;
+    padding-top: 5px;
+}
+
+#trackUrl {
+margin-top: 10px;
+}
+
+/* Ticker */
 .ticker-wrap {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: black;
-    overflow: hidden;
     height: 30px;
     line-height: 30px;
+    background: #000;
+    overflow: hidden;
+}
+
+.ticker-wrap img {
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
 }
 
 .marquee {
+    position: absolute;
+    width: 100%;
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
-    position: absolute;
-    width: 100%;
 }
 
 .marquee span {
@@ -76,47 +125,15 @@ fieldset {
     animation-delay: 12s;
 }
 
-.meta-group {
-    display: flex;
-    flex-direction: column;
+/* Utilities */
+.copy {
+    cursor: pointer;
 }
 
-.meta-group small {
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    opacity: 0.7;
-}
-
-.music-seperator {
-    display: inline-block;
-    width: fit-width;
-    border-top: 1.5px solid #555;
-    padding-top: 5px;
-
-}
-
-.music-container {
-    display: flex;
-    align-items: left;
-    gap: 20px;
-    padding: 15px;
-}
-
-
-#trackUrl {
-margin-top: 10px;
-}
-
-.album-art {
-    width: 200px;
-    height: auto;
-}
-
+/* Media Queries */
 @media (max-width: 600px) {
     .music-container {
         display: flex;
-        /*flex-direction: column;*/
-        text-align: left;
         align-items: left;
     }
 
@@ -130,6 +147,7 @@ margin-top: 10px;
     }
 }
 
+/* Animations */
 @keyframes marquee {
     0% {
         transform: translate(0, 0);
@@ -138,5 +156,3 @@ margin-top: 10px;
         transform: translate(-100%, 0);
     }
 }
-
-
