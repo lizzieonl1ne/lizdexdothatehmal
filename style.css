@@ -39,6 +39,11 @@ pre a {
 }
 
 /* Components */
+
+h1, h2, h3, h4, h5 {
+    margin: 10px;
+}
+
 fieldset {
     border: 2px solid #FFF;
     box-shadow: 1.5px 0px 0px #ff0000bb, -1.5px 0px 0px #00ffffbb;
