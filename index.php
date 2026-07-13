@@ -17,7 +17,7 @@
 
 <div class="header">
     <fieldset>
-        <h2 style="margin-bottom: 0;">ashe's web home</h2>
+        <img src="pfp.png" style="height:100px; vertical-align:middle; margin-right:8px;"><h2 style="margin-bottom: 0; display:inline;"><h2 style="margin-bottom: 0;">ashe's web home</h2>
 
         <?php include 'counter.php'; ?>
         <small><span class="hits"><?php echo $hits; ?></span> total views</small>
