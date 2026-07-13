@@ -9,11 +9,11 @@
 <body>
 
 <main>
-<div class="ticker-wrap">
+<!--<div class="ticker-wrap">
     <p class="marquee">
         <span><?php include 'ticker.php'; ?></span>
     </p>
-</div>
+</div>-->
 
 <div class="header">
     <fieldset>
