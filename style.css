@@ -15,8 +15,7 @@
 
 body, html {
     font-family: 'bigblueterm';
-}
-
+/* grid and layout */
 main {
     max-width: 70rem;
     margin: 0 auto;
@@ -40,16 +39,19 @@ main div.navbar {
 }
 main div.stuff {
     grid-area: stuff;
+    font-size: 0.9rem;
 }
 main div.footer {
     grid-area: footer;
 }
+/*blur filter on divs in main*/
 @supports (backdrop-filter: blur(10px)) {
     main {
         backdrop-filter: blur(10px);
     }
 }
 
+/*divs under main*/
 main div {
     background-color: rgba(0, 0, 0, 0.7);
     color: rgb(220, 220, 220);
@@ -58,6 +60,17 @@ main div {
     border: 2px solid rgb(200, 200, 200);
 }
 
+/*linkies*/
+
+a:link {
+    color: skyblue;
+}
+a:visited {
+    color: limegreen;
+}
+a:hover {
+    text-decoration: underline wavy;
+}
 /*video backahdfrogm fke*/
 
 .bg-video {
