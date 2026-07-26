@@ -31,6 +31,14 @@ main {
 h1, h2, h3, h4, h5 {
     font-family: 'hybrid-o';
     font-size: 2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 main div.header {
