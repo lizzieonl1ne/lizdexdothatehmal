@@ -67,18 +67,12 @@ main div.footer {
 }
 
 /*divs under main*/
-main div {
+main div:not(#cdr, .cdr-container, cdr-widget) {
     background-color: rgba(0, 0, 0, 0.7);
     color: rgb(220, 220, 220);
     padding: 10px;
     border-radius: 10px;
     border: 2px solid rgb(200, 200, 200);
-}
-
-/*cdring styling hotfix, there may be a few commits bc i can only test it live..?*/
-#cdr {
-    padding: 0 !important;
-    border: none !important;
 }
 
 /*linkies*/
