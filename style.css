@@ -28,6 +28,8 @@ main {
     gap: 0.5em;
 }
 
+
+
 h1, h2, h3, h4, h5 {
     font-family: 'hybrid-o';
     font-size: 2em;
@@ -71,6 +73,12 @@ main div {
     padding: 10px;
     border-radius: 10px;
     border: 2px solid rgb(200, 200, 200);
+}
+
+/*cdring styling hotfix, there may be a few commits bc i can only test it live..?*/
+#cdr {
+    padding: 0 !important;
+    border: none !important;
 }
 
 /*linkies*/
