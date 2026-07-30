@@ -75,6 +75,11 @@ main div:not(#cdr, .cdr-container, cdr-widget) {
     border: 2px solid rgb(200, 200, 200);
 }
 
+#cdr {
+    border: none;
+    padding: 0;
+}
+
 /*linkies*/
 a:link {
     color: skyblue;
